@@ -2,6 +2,9 @@
 
 FROM node:18-alpine3.15 as builder
 
+RUN apk add git g++ make
+RUN apk add python3 py3-pip
+
 RUN mkdir -p /root/app
 WORKDIR /root/app
 
