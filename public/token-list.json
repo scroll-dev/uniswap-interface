@@ -1,0 +1,21 @@
+{
+  "name": "Scroll",
+  "logoURI": "https://scroll.io/img/logo.png",
+  "keywords": ["defi", "DEFI"],
+  "timestamp": "2022-07-25T01:40:34.305Z",
+  "tokens": [
+    {
+      "chainId": 534353,
+      "address": "0x80732890c93c6D9c6C23E06F888eD0CB88A06018",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": 18,
+      "logoURI": "http://34.213.12.219:8562/images/usd-coin.png"
+    }
+  ],
+  "version": {
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
