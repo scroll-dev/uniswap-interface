@@ -5,7 +5,7 @@ import { Text } from 'rebass'
 
 import styled from 'styled-components'
 
-import Logo from '../../assets/images/logo_with_text.png'
+import Logo from '../../assets/images/logo.png'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 
@@ -126,10 +126,11 @@ export default function Header() {
     <HeaderFrame>
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
         <HeaderElement>
-          <Title href=".">
+          <Title href="." style={{ textDecoration: 'none' }}>
             <UniIcon>
-              <img src={Logo} style={{ width: '120px' }} alt="logo" />
+              <img src={Logo} style={{ width: '50px' }} alt="logo" />
             </UniIcon>
+            <p style={{ color: '#000', fontWeight: 500, fontSize: '20px', paddingLeft: '6px' }}>Scroll Swap</p>
           </Title>
         </HeaderElement>
         <HeaderControls>
