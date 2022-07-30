@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import Logo from '../../assets/images/logo.png'
 import { useActiveWeb3React } from '../../hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
-
+import { useDarkModeManager } from '../../state/user/hooks'
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
 
@@ -107,18 +107,18 @@ const BalanceText = styled(Text)`
     display: none;
   `};
 `
-
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MAINNET]: null,
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
-  [ChainId.TEST]: 'Scroll Testnet'
+  [ChainId.TEST]: 'Scroll L2 Testnet'
 }
 
 export default function Header() {
   const { account, chainId } = useActiveWeb3React()
+  const [darkMode] = useDarkModeManager()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
@@ -126,11 +126,15 @@ export default function Header() {
     <HeaderFrame>
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
         <HeaderElement>
-          <Title href="." style={{ textDecoration: 'none' }}>
+          <Title href="https://enter.scroll.io/" style={{ textDecoration: 'none' }}>
             <UniIcon>
               <img src={Logo} style={{ width: '50px' }} alt="logo" />
             </UniIcon>
-            <p style={{ color: '#000', fontWeight: 500, fontSize: '20px', paddingLeft: '6px' }}>Scroll Swap</p>
+          </Title>
+          <Title href="." style={{ textDecoration: 'none' }}>
+            <Text style={{ color: darkMode ? '#fff' : '#000', fontWeight: 500, fontSize: '20px', paddingLeft: '6px' }}>
+              Scroll Swap
+            </Text>
           </Title>
         </HeaderElement>
         <HeaderControls>
