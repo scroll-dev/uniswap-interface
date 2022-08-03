@@ -18,16 +18,19 @@ export function useEagerConnect() {
   const [tried, setTried] = useState(false)
 
   useEffect(() => {
+    const ethereum = (window as any).ethereum
     injected.isAuthorized().then(isAuthorized => {
       if (isAuthorized) {
         activate(injected, undefined, true).catch(() => {
           setTried(true)
         })
+        ethereum.removeAllListeners(['networkChanged'])
       } else {
         if (isMobile && window.ethereum) {
           activate(injected, undefined, true).catch(() => {
             setTried(true)
           })
+          ethereum.removeAllListeners(['networkChanged'])
         } else {
           setTried(true)
         }
