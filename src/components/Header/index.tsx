@@ -126,7 +126,7 @@ export default function Header() {
     <HeaderFrame>
       <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
         <HeaderElement>
-          <Title href="https://enter.scroll.io/" style={{ textDecoration: 'none' }}>
+          <Title href="https://prealpha.scroll.io" style={{ textDecoration: 'none' }}>
             <UniIcon>
               <img src={Logo} style={{ width: '50px' }} alt="logo" />
             </UniIcon>
