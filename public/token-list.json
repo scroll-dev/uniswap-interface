@@ -10,7 +10,7 @@
       "name": "USDC",
       "symbol": "USDC",
       "decimals": 18,
-      "logoURI": "http://34.213.12.219:8562/images/usd-coin.png"
+      "logoURI": "https://swap.scroll.io/images/usd-coin.png"
     }
   ],
   "version": {
