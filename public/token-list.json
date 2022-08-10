@@ -11,6 +11,14 @@
       "symbol": "USDC",
       "decimals": 18,
       "logoURI": "https://swap.scroll.io/images/usd-coin.png"
+    },
+    {
+      "chainId": 534353,
+      "address": "0x05fDbDfaE180345C6Cff5316c286727CF1a43327",
+      "name": "WETH",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://swap.scroll.io/images/weth.png"
     }
   ],
   "version": {
