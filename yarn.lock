@@ -13182,6 +13182,11 @@ schema-utils@^2.5.0, schema-utils@^2.6.0, schema-utils@^2.6.1, schema-utils@^2.6
     ajv "^6.12.2"
     ajv-keywords "^3.4.1"
 
+scroll-common-header@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/scroll-common-header/-/scroll-common-header-0.1.2.tgz#bfb3b23b79dbdcf5ac8869211cfef9e415b90798"
+  integrity sha512-rgtk+2yyOZgd/yIgKNPEIYwMzxyvUcuxDKlM924zGIzIihltEuVu1oIAcbRoHfh24lVv6WtOvRECknbTocvxsw==
+
 scrypt-js@3.0.1, scrypt-js@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/scrypt-js/-/scrypt-js-3.0.1.tgz#d314a57c2aef69d1ad98a138a21fe9eafa9ee312"
