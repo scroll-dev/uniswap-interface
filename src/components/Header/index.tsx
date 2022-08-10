@@ -12,6 +12,8 @@ import { useDarkModeManager } from '../../state/user/hooks'
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
 
+import { CommonHeader } from 'scroll-common-header'
+
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 
@@ -22,7 +24,7 @@ const HeaderFrame = styled.div`
   flex-direction: column;
   width: 100%;
   top: 0;
-  position: absolute;
+  // position: absolute;
   z-index: 2;
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
     padding: 12px 0 0 0;
@@ -123,39 +125,49 @@ export default function Header() {
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
   return (
-    <HeaderFrame>
-      <RowBetween style={{ alignItems: 'flex-start' }} padding="1rem 1rem 0 1rem">
-        <HeaderElement>
-          <Title href="https://prealpha.scroll.io" style={{ textDecoration: 'none' }}>
-            <UniIcon>
-              <img src={Logo} style={{ width: '50px' }} alt="logo" />
-            </UniIcon>
-          </Title>
-          <Title href="." style={{ textDecoration: 'none' }}>
-            <Text style={{ color: darkMode ? '#fff' : '#000', fontWeight: 500, fontSize: '20px', paddingLeft: '6px' }}>
-              Scroll Swap
-            </Text>
-          </Title>
-        </HeaderElement>
-        <HeaderControls>
-          <HeaderElement>
-            <TestnetWrapper>
-              {!isMobile && chainId && NETWORK_LABELS[chainId] && <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>}
-            </TestnetWrapper>
-            <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
-              {account && userEthBalance ? (
-                <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                  {userEthBalance?.toSignificant(4)} ETH
-                </BalanceText>
-              ) : null}
-              <Web3Status />
-            </AccountElement>
+    <div style={{ display: 'block', width: '100%' }}>
+      <CommonHeader activeTab="Swap" backgroundColor="#fff"></CommonHeader>
+      <HeaderFrame>
+        <RowBetween
+          style={{ alignItems: 'flex-start', justifyContent: 'end', paddingTop: 0, marginTop: '10px' }}
+          padding="1rem 1rem 0 1rem"
+        >
+          <HeaderElement style={{ display: 'none' }}>
+            <Title href="https://prealpha.scroll.io" style={{ textDecoration: 'none' }}>
+              <UniIcon>
+                <img src={Logo} style={{ width: '50px' }} alt="logo" />
+              </UniIcon>
+            </Title>
+            <Title href="." style={{ textDecoration: 'none' }}>
+              <Text
+                style={{ color: darkMode ? '#fff' : '#000', fontWeight: 500, fontSize: '20px', paddingLeft: '6px' }}
+              >
+                Scroll Swap
+              </Text>
+            </Title>
           </HeaderElement>
-          <HeaderElementWrap>
-            <Settings />
-          </HeaderElementWrap>
-        </HeaderControls>
-      </RowBetween>
-    </HeaderFrame>
+          <HeaderControls>
+            <HeaderElement>
+              <TestnetWrapper>
+                {!isMobile && chainId && NETWORK_LABELS[chainId] && (
+                  <NetworkCard>{NETWORK_LABELS[chainId]}</NetworkCard>
+                )}
+              </TestnetWrapper>
+              <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
+                {account && userEthBalance ? (
+                  <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
+                    {userEthBalance?.toSignificant(4)} ETH
+                  </BalanceText>
+                ) : null}
+                <Web3Status />
+              </AccountElement>
+            </HeaderElement>
+            <HeaderElementWrap>
+              <Settings />
+            </HeaderElementWrap>
+          </HeaderControls>
+        </RowBetween>
+      </HeaderFrame>
+    </div>
   )
 }
