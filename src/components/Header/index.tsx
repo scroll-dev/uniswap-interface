@@ -129,7 +129,7 @@ export default function Header() {
       <CommonHeader activeTab="Swap" backgroundColor="#fff"></CommonHeader>
       <HeaderFrame>
         <RowBetween
-          style={{ alignItems: 'flex-start', justifyContent: 'end', paddingTop: 0, marginTop: '10px' }}
+          style={{ alignItems: 'flex-start', justifyContent: 'end', paddingTop: 0, marginTop: '40px' }}
           padding="1rem 1rem 0 1rem"
         >
           <HeaderElement style={{ display: 'none' }}>
