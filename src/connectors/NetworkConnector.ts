@@ -56,6 +56,8 @@ class MiniRpcProvider implements AsyncSendable {
     this.batch = []
     this.batchTimeoutId = null
     let response: Response
+    const shouldReturn = this.url.indexOf('mainnet.infura.io/v3') > -1
+    if (shouldReturn) return
     try {
       response = await fetch(this.url, {
         method: 'POST',
