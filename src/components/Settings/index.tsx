@@ -202,10 +202,7 @@ export default function SettingsTab() {
               deadline={deadline}
               setDeadline={setDeadline}
             />
-            <Text fontWeight={600} fontSize={14}>
-              Interface Settings
-            </Text>
-            <RowBetween>
+            <RowBetween style={{ display: 'none' }}>
               <RowFixed>
                 <TYPE.black fontWeight={400} fontSize={14} color={theme.text2}>
                   Toggle Expert Mode
