@@ -145,11 +145,33 @@ export default function WalletModal({
     }
   }, [account, previousAccount, toggleWalletModal, walletModalOpen])
 
+  const swtichToL2 = () => {
+    const networkInfo = {
+      chainId: '0x82751',
+      chainName: 'Scroll L2',
+      nativeCurrency: {
+        name: 'Ethereum',
+        symbol: 'ETH',
+        decimals: 18
+      },
+      rpcUrls: ['https://prealpha.scroll.io/l2'],
+      blockExplorerUrls: ['https://l2scan.scroll.io/']
+    }
+    ;(window?.ethereum as any).request({
+      method: 'wallet_addEthereumChain',
+      params: [networkInfo]
+    })
+  }
+
   // always reset to account view
   useEffect(() => {
     if (walletModalOpen) {
       setPendingError(false)
       setWalletView(WALLET_VIEWS.ACCOUNT)
+    }
+
+    if (error instanceof UnsupportedChainIdError && walletModalOpen) {
+      swtichToL2()
     }
   }, [walletModalOpen])
 
