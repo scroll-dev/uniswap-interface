@@ -169,11 +169,10 @@ export default function WalletModal({
       setPendingError(false)
       setWalletView(WALLET_VIEWS.ACCOUNT)
     }
-
     if (error instanceof UnsupportedChainIdError && walletModalOpen) {
       swtichToL2()
     }
-  }, [walletModalOpen])
+  }, [walletModalOpen, error])
 
   // close modal when a connection is successful
   const activePrevious = usePrevious(active)
@@ -205,15 +204,17 @@ export default function WalletModal({
     if (connector instanceof WalletConnectConnector && connector.walletConnectProvider?.wc?.uri) {
       connector.walletConnectProvider = undefined
     }
-
+    const ethereum = (window as any).ethereum
     connector &&
       activate(connector, undefined, true).catch(error => {
         if (error instanceof UnsupportedChainIdError) {
           activate(connector) // a little janky...can't use setError because the connector isn't set
+          ethereum.removeAllListeners(['networkChanged'])
         } else {
           setPendingError(true)
         }
       })
+    ethereum.removeAllListeners(['networkChanged'])
   }
 
   // close wallet modal if fortmatic modal is active
