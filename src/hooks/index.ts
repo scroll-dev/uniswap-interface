@@ -64,6 +64,7 @@ export function useInactiveListener(suppress = false) {
         activate(injected, undefined, true).catch(error => {
           console.error('Failed to activate after chain changed', error)
         })
+        ;(window as any).ethereum.removeAllListeners(['networkChanged'])
       }
 
       const handleAccountsChanged = (accounts: string[]) => {
@@ -72,6 +73,7 @@ export function useInactiveListener(suppress = false) {
           activate(injected, undefined, true).catch(error => {
             console.error('Failed to activate after accounts changed', error)
           })
+          ;(window as any).ethereum.removeAllListeners(['networkChanged'])
         }
       }
 
