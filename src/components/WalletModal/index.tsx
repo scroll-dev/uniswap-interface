@@ -148,7 +148,7 @@ export default function WalletModal({
     }
   }, [account, previousAccount, toggleWalletModal, walletModalOpen])
 
-  const swtichToL2 = () => {
+  const switchToL2 = () => {
     const networkInfo = {
       // TODO: Make dynamic and manage centrally
       chainId: '0x82752',
@@ -174,7 +174,7 @@ export default function WalletModal({
       setWalletView(WALLET_VIEWS.ACCOUNT)
     }
     if (error instanceof UnsupportedChainIdError && walletModalOpen) {
-      swtichToL2()
+      switchToL2()
     }
   }, [walletModalOpen, error])
 
