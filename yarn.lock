@@ -13187,10 +13187,10 @@ schema-utils@^2.5.0, schema-utils@^2.6.0, schema-utils@^2.6.1, schema-utils@^2.6
     ajv "^6.12.2"
     ajv-keywords "^3.4.1"
 
-scroll-common-header@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/scroll-common-header/-/scroll-common-header-0.2.4.tgz#2ff70451e65768e4a64188d279c0ecf1ed8922de"
-  integrity sha512-ftK1+Jmv8MmWnFTNjCz0beY7QeOvInLXfgyzUd8SnxV8hBODeL93SnTUWlxSkZkp+hsSGyjiG49QyITZYTyYsQ==
+scroll-common-header@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/scroll-common-header/-/scroll-common-header-0.3.2.tgz#febb50f93bcb740096786e0e21b29f052c47501c"
+  integrity sha512-kHZGgqiCt7/2YnEj180sdp5hrAYGoInnYQtzORpdNpoaaeq23yAMCOAuOFISmBI+XrSx1zbB7fFD8xY+5CrZEg==
 
 scrypt-js@3.0.1, scrypt-js@^3.0.0:
   version "3.0.1"

@@ -1,5 +1,4 @@
 import { ChainId } from '@uniswap/sdk'
-import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
 
@@ -7,15 +6,19 @@ import styled from 'styled-components'
 
 import Logo from '../../assets/images/logo.png'
 import { useActiveWeb3React } from '../../hooks'
-import { useETHBalances } from '../../state/wallet/hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
+import { useETHBalances } from '../../state/wallet/hooks'
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
 
 import { CommonHeader } from 'scroll-common-header'
 
+import React, { useEffect, useState } from 'react'
+import { DOMAIN_STAGING } from '../../constants'
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
+
+console.debug(React.version)
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -124,9 +127,21 @@ export default function Header() {
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
+  const [headerType, setHeaderType] = useState<any>(undefined)
+
+  useEffect(() => {
+    const pathHeaderDomains = [DOMAIN_STAGING, 'localhost']
+    const isPath = pathHeaderDomains.some(path => ~window.location.href.indexOf(path))
+    if (isPath) {
+      setHeaderType('path')
+    } else {
+      setHeaderType('subdomain')
+    }
+  }, [])
+
   return (
     <div style={{ display: 'block', width: '100%' }}>
-      <CommonHeader activeTab="Swap" backgroundColor="#fff"></CommonHeader>
+      <CommonHeader activeTab="Swap" backgroundColor="#fff" type={headerType}></CommonHeader>
       <HeaderFrame>
         <RowBetween
           style={{ alignItems: 'flex-start', justifyContent: 'end', paddingTop: 0, marginTop: '40px' }}
