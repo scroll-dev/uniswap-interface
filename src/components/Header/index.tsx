@@ -118,7 +118,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
-  [ChainId.TEST]: 'Scroll L2'
+  [ChainId.SCROLL_L2_TESTNET]: 'Scroll L2'
 }
 
 export default function Header() {
@@ -148,7 +148,8 @@ export default function Header() {
           padding="1rem 1rem 0 1rem"
         >
           <HeaderElement style={{ display: 'none' }}>
-            <Title href="https://prealpha.scroll.io" style={{ textDecoration: 'none' }}>
+            {/* TODO: ENV */}
+            <Title href="https://staging-prealpha.scroll.io" style={{ textDecoration: 'none' }}>
               <UniIcon>
                 <img src={Logo} style={{ width: '50px' }} alt="logo" />
               </UniIcon>

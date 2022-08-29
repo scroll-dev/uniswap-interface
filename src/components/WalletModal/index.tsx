@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
+import { useEffect, useState } from 'react'
+import { isMobile } from 'react-device-detect'
 import ReactGA from 'react-ga'
 import styled from 'styled-components'
-import { isMobile } from 'react-device-detect'
-import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
 import usePrevious from '../../hooks/usePrevious'
 import { useWalletModalOpen, useWalletModalToggle } from '../../state/application/hooks'
 
-import Modal from '../Modal'
-import AccountDetails from '../AccountDetails'
-import PendingView from './PendingView'
-import Option from './Option'
-import { SUPPORTED_WALLETS } from '../../constants'
-import { ExternalLink } from '../../theme'
+import { AbstractConnector } from '@web3-react/abstract-connector'
+import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+import React from 'react'
 import MetamaskIcon from '../../assets/images/metamask.png'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
-import { injected, fortmatic, portis } from '../../connectors'
+import { fortmatic, injected, portis } from '../../connectors'
 import { OVERLAY_READY } from '../../connectors/Fortmatic'
-import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
-import { AbstractConnector } from '@web3-react/abstract-connector'
+import { SUPPORTED_WALLETS } from '../../constants'
+import { ExternalLink } from '../../theme'
+import AccountDetails from '../AccountDetails'
+import Modal from '../Modal'
+import Option from './Option'
+import PendingView from './PendingView'
+
+console.debug(React.version)
 
 const CloseIcon = styled.div`
   position: absolute;
@@ -147,15 +150,16 @@ export default function WalletModal({
 
   const swtichToL2 = () => {
     const networkInfo = {
-      chainId: '0x82751',
-      chainName: 'Scroll L2',
+      // TODO: Make dynamic and manage centrally
+      chainId: '0x82752',
+      chainName: 'Scroll L2 Testnet [STAGING]',
       nativeCurrency: {
         name: 'Ethereum',
-        symbol: 'ETH',
+        symbol: 'T_ETH',
         decimals: 18
       },
-      rpcUrls: ['https://prealpha.scroll.io/l2'],
-      blockExplorerUrls: ['https://l2scan.scroll.io/']
+      rpcUrls: ['https://staging-prealpha.scroll.io/l2'],
+      blockExplorerUrls: ['https://staging-prealpha.scroll.io/l2scan']
     }
     ;(window?.ethereum as any).request({
       method: 'wallet_addEthereumChain',

@@ -5,18 +5,18 @@
   "timestamp": "2022-07-25T01:40:34.305Z",
   "tokens": [
     {
-      "chainId": 534353,
+      "chainId": 534354,
       "address": "0x80732890c93c6D9c6C23E06F888eD0CB88A06018",
-      "name": "USDC",
-      "symbol": "USDC",
+      "name": "T_USDC",
+      "symbol": "T_USDC",
       "decimals": 18,
       "logoURI": "https://swap.scroll.io/images/usd-coin.png"
     },
     {
-      "chainId": 534353,
+      "chainId": 534354,
       "address": "0x05fDbDfaE180345C6Cff5316c286727CF1a43327",
-      "name": "WETH",
-      "symbol": "WETH",
+      "name": "T_WETH",
+      "symbol": "T_WETH",
       "decimals": 18,
       "logoURI": "https://swap.scroll.io/images/weth.png"
     }
