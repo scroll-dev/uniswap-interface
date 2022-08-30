@@ -1,5 +1,5 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@uniswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
+import { ChainId, JSBI, Percent, Token, WETH } from 'uniswap-v2-sdk-scroll'
 
 import { injected } from '../connectors'
 

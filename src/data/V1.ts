@@ -1,4 +1,5 @@
 import { AddressZero } from '@ethersproject/constants'
+import { useMemo } from 'react'
 import {
   BigintIsh,
   Currency,
@@ -14,8 +15,7 @@ import {
   Trade,
   TradeType,
   WETH
-} from '@uniswap/sdk'
-import { useMemo } from 'react'
+} from 'uniswap-v2-sdk-scroll'
 import { useActiveWeb3React } from '../hooks'
 import { useAllTokens } from '../hooks/Tokens'
 import { useV1FactoryContract } from '../hooks/useContract'

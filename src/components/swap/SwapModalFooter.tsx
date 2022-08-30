@@ -1,8 +1,8 @@
-import { Trade, TradeType } from '@uniswap/sdk'
 import React, { useContext, useMemo, useState } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
+import { Trade, TradeType } from 'uniswap-v2-sdk-scroll'
 import { Field } from '../../state/swap/actions'
 import { TYPE } from '../../theme'
 import {

@@ -1,6 +1,6 @@
-import { Currency, ETHER, Token } from '@uniswap/sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
+import { Currency, ETHER, Token } from 'uniswap-v2-sdk-scroll'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import useHttpLocations from '../../hooks/useHttpLocations'

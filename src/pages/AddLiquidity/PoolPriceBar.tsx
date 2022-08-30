@@ -1,7 +1,7 @@
-import { Currency, Percent, Price } from '@uniswap/sdk'
 import React, { useContext } from 'react'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
+import { Currency, Percent, Price } from 'uniswap-v2-sdk-scroll'
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'
 import { ONE_BIPS } from '../../constants'

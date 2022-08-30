@@ -1,6 +1,6 @@
-import { Currency, CurrencyAmount, Pair, Token, Trade } from '@uniswap/sdk'
 import flatMap from 'lodash.flatmap'
 import { useMemo } from 'react'
+import { Currency, CurrencyAmount, Pair, Token, Trade } from 'uniswap-v2-sdk-scroll'
 
 import { BASES_TO_CHECK_TRADES_AGAINST, CUSTOM_BASES } from '../constants'
 import { PairState, usePairs } from '../data/Reserves'

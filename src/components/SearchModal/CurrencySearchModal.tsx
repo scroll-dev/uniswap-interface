@@ -1,6 +1,6 @@
-import { Currency } from '@uniswap/sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import ReactGA from 'react-ga'
+import { Currency } from 'uniswap-v2-sdk-scroll'
 import useLast from '../../hooks/useLast'
 import { useSelectedListUrl } from '../../state/lists/hooks'
 import Modal from '../Modal'

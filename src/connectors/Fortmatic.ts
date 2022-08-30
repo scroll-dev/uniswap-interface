@@ -1,5 +1,5 @@
-import { ChainId } from '@uniswap/sdk'
 import { FortmaticConnector as FortmaticConnectorCore } from '@web3-react/fortmatic-connector'
+import { ChainId } from 'uniswap-v2-sdk-scroll'
 
 export const OVERLAY_READY = 'OVERLAY_READY'
 

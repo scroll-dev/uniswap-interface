@@ -1,10 +1,10 @@
-import { JSBI, Pair, Percent } from '@uniswap/sdk'
 import { darken } from 'polished'
 import React, { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
 import styled from 'styled-components'
+import { JSBI, Pair, Percent } from 'uniswap-v2-sdk-scroll'
 import { useTotalSupply } from '../../data/TotalSupply'
 
 import { useActiveWeb3React } from '../../hooks'

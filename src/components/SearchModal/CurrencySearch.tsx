@@ -1,10 +1,11 @@
-import { Currency, ETHER, Token } from '@uniswap/sdk'
 import React, { KeyboardEvent, RefObject, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react'
 import ReactGA from 'react-ga'
 import { useTranslation } from 'react-i18next'
+import AutoSizer from 'react-virtualized-auto-sizer'
 import { FixedSizeList } from 'react-window'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
+import { Currency, ETHER, Token } from 'uniswap-v2-sdk-scroll'
 import { useActiveWeb3React } from '../../hooks'
 import { useAllTokens, useToken } from '../../hooks/Tokens'
 import { useSelectedListInfo } from '../../state/lists/hooks'
@@ -21,7 +22,6 @@ import { filterTokens } from './filtering'
 import SortButton from './SortButton'
 import { useTokenComparator } from './sorting'
 import { PaddedColumn, SearchInput, Separator } from './styleds'
-import AutoSizer from 'react-virtualized-auto-sizer'
 
 interface CurrencySearchProps {
   isOpen: boolean

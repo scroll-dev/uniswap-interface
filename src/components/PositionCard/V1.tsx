@@ -1,6 +1,6 @@
-import { Token, TokenAmount, WETH } from '@uniswap/sdk'
 import React, { useContext } from 'react'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
+import { Token, TokenAmount, WETH } from 'uniswap-v2-sdk-scroll'
 
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'

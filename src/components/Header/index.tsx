@@ -1,6 +1,6 @@
-import { ChainId } from '@uniswap/sdk'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
+import { ChainId } from 'uniswap-v2-sdk-scroll'
 
 import styled from 'styled-components'
 

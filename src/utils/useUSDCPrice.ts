@@ -1,5 +1,5 @@
-import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@uniswap/sdk'
 import { useMemo } from 'react'
+import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from 'uniswap-v2-sdk-scroll'
 import { USDC } from '../constants'
 import { PairState, usePairs } from '../data/Reserves'
 import { useActiveWeb3React } from '../hooks'
