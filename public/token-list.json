@@ -7,16 +7,16 @@
     {
       "chainId": 534354,
       "address": "0x80732890c93c6D9c6C23E06F888eD0CB88A06018",
-      "name": "TUSDC",
-      "symbol": "TUSDC",
+      "name": "USDC",
+      "symbol": "USDC",
       "decimals": 18,
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/usd-coin.png"
     },
     {
       "chainId": 534354,
       "address": "0x05fDbDfaE180345C6Cff5316c286727CF1a43327",
-      "name": "TWETH",
-      "symbol": "TWETH",
+      "name": "WETH",
+      "symbol": "WETH",
       "decimals": 18,
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/weth.png"
     }
