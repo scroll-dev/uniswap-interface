@@ -15,8 +15,8 @@
     {
       "chainId": 534354,
       "address": "0x05fDbDfaE180345C6Cff5316c286727CF1a43327",
-      "name": "T_ETH",
-      "symbol": "T_ETH",
+      "name": "TETH",
+      "symbol": "TETH",
       "decimals": 18,
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/weth.png"
     }
