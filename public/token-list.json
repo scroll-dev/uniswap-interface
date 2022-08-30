@@ -1,24 +1,24 @@
 {
   "name": "Scroll",
-  "logoURI": "img/logo.png",
+  "logoURI": "https://scroll.io/img/logo.png",
   "keywords": ["defi", "DEFI"],
   "timestamp": "2022-07-25T01:40:34.305Z",
   "tokens": [
     {
       "chainId": 534354,
       "address": "0x80732890c93c6D9c6C23E06F888eD0CB88A06018",
-      "name": "T_USDC",
-      "symbol": "T_USDC",
+      "name": "TUSDC",
+      "symbol": "TUSDC",
       "decimals": 18,
-      "logoURI": "images/usd-coin.png"
+      "logoURI": "https://staging-prealpha.scroll.io/swap/images/usd-coin.png"
     },
     {
       "chainId": 534354,
       "address": "0x05fDbDfaE180345C6Cff5316c286727CF1a43327",
-      "name": "T_WETH",
-      "symbol": "T_WETH",
+      "name": "TWETH",
+      "symbol": "TWETH",
       "decimals": 18,
-      "logoURI": "images/weth.png"
+      "logoURI": "https://staging-prealpha.scroll.io/swap/images/weth.png"
     }
   ],
   "version": {
