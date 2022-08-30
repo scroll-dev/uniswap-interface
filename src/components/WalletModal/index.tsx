@@ -20,8 +20,6 @@ import Modal from '../Modal'
 import Option from './Option'
 import PendingView from './PendingView'
 
-console.debug(React.version)
-
 const CloseIcon = styled.div`
   position: absolute;
   right: 1rem;

@@ -18,8 +18,6 @@ import { DOMAIN_STAGING } from '../../constants'
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 
-console.debug(React.version)
-
 const HeaderFrame = styled.div`
   display: flex;
   align-items: center;

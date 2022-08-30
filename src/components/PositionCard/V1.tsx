@@ -11,8 +11,6 @@ import DoubleCurrencyLogo from '../DoubleLogo'
 import { RowBetween, RowFixed } from '../Row'
 import { FixedHeightRow, HoverCard } from './index'
 
-console.debug(React.version)
-
 interface PositionCardProps extends RouteComponentProps<{}> {
   token: Token
   V1LiquidityBalance: TokenAmount
