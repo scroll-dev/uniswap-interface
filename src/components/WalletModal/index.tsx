@@ -157,7 +157,7 @@ export default function WalletModal({
         decimals: 18
       },
       rpcUrls: ['https://staging-prealpha.scroll.io/l2'],
-      blockExplorerUrls: ['https://staging-prealpha.scroll.io/l2scan']
+      blockExplorerUrls: ['https://staging-prealpha.scroll.io/l2scan/']
     }
     ;(window?.ethereum as any).request({
       method: 'wallet_addEthereumChain',
