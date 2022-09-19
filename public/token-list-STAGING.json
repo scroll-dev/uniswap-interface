@@ -1,28 +1,36 @@
 {
-  "name": "Scroll",
+  "name": "[STAGING] Scroll L2 Tokens",
   "logoURI": "https://scroll.io/img/logo.png",
   "keywords": ["defi", "DEFI"],
-  "timestamp": "2022-07-25T01:40:34.305Z",
+  "timestamp": "2022-09-19T00:00:00.000Z",
   "tokens": [
     {
       "chainId": 534354,
       "address": "0x80732890c93c6D9c6C23E06F888eD0CB88A06018",
-      "name": "USDC",
-      "symbol": "USDC",
+      "name": "TSUSDC",
+      "symbol": "TSUSDC",
       "decimals": 18,
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/usd-coin.png"
     },
     {
       "chainId": 534354,
       "address": "0x05fDbDfaE180345C6Cff5316c286727CF1a43327",
-      "name": "WETH",
-      "symbol": "WETH",
+      "name": "TSWETH",
+      "symbol": "TSWETH",
       "decimals": 18,
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/weth.png"
+    },
+    {
+      "chainId": 534354,
+      "address": "0x4f4eb5ac461c115191390d1760109f1ea185e609",
+      "name": "TSUNI2",
+      "symbol": "TSUNI2",
+      "decimals": 18,
+      "logoURI": "https://staging-prealpha.scroll.io/swap/images/uni-v2.png"
     }
   ],
   "version": {
-    "major": 0,
+    "major": 1,
     "minor": 0,
     "patch": 0
   }

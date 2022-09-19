@@ -148,16 +148,19 @@ export default function WalletModal({
 
   const switchToL2 = () => {
     const networkInfo = {
-      // TODO: Make dynamic and manage centrally
-      chainId: '0x82752',
-      chainName: 'Scroll L2 Testnet [STAGING]',
+      chainId: process.env.REACT_APP_CHAIN_ID,
+      chainName:
+        'Scroll L2 Testnet' +
+        (process.env.REACT_APP_SCROLL_ENVIRONMENT === 'MAIN'
+          ? ''
+          : ' [' + process.env.REACT_APP_SCROLL_ENVIRONMENT + ']'),
       nativeCurrency: {
         name: 'Ethereum',
-        symbol: 'T_ETH',
+        symbol: process.env.REACT_APP_ETH_SYMBOL,
         decimals: 18
       },
-      rpcUrls: ['https://staging-prealpha.scroll.io/l2'],
-      blockExplorerUrls: ['https://staging-prealpha.scroll.io/l2scan/']
+      rpcUrls: [process.env.REACT_APP_EXTERNAL_RPC_URI],
+      blockExplorerUrls: [process.env.REACT_APP_EXTERNAL_EXPLORER_URI]
     }
     ;(window?.ethereum as any).request({
       method: 'wallet_addEthereumChain',

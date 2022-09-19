@@ -28,7 +28,7 @@ export function isAddress(value: any): string | false {
 
 // TODO: Make dynamic and manage centrally
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
-  const prefix = `https://staging-prealpha.scroll.io/l2scan/`
+  const prefix = process.env.REACT_APP_EXTERNAL_EXPLORER_URI
 
   switch (type) {
     case 'transaction': {
