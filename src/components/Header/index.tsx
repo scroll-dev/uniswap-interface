@@ -13,8 +13,7 @@ import Settings from '../Settings'
 
 import { CommonHeader } from 'scroll-common-header'
 
-import React, { useEffect, useState } from 'react'
-import { DOMAIN_STAGING } from '../../constants'
+import React from 'react'
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
 
@@ -125,21 +124,9 @@ export default function Header() {
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
-  const [headerType, setHeaderType] = useState<any>(undefined)
-
-  useEffect(() => {
-    const pathHeaderDomains = [DOMAIN_STAGING, 'localhost']
-    const isPath = pathHeaderDomains.some(path => ~window.location.href.indexOf(path))
-    if (isPath) {
-      setHeaderType('path')
-    } else {
-      setHeaderType('subdomain')
-    }
-  }, [])
-
   return (
     <div style={{ display: 'block', width: '100%' }}>
-      <CommonHeader activeTab="Swap" backgroundColor="#fff" type={headerType}></CommonHeader>
+      <CommonHeader activeTab="Swap" backgroundColor="#fff" type={'path'}></CommonHeader>
       <HeaderFrame>
         <RowBetween
           style={{ alignItems: 'flex-start', justifyContent: 'end', paddingTop: 0, marginTop: '40px' }}
@@ -147,7 +134,7 @@ export default function Header() {
         >
           <HeaderElement style={{ display: 'none' }}>
             {/* TODO: ENV */}
-            <Title href="https://staging-prealpha.scroll.io" style={{ textDecoration: 'none' }}>
+            <Title href={process.env.REACT_APP_HOME_URI} style={{ textDecoration: 'none' }}>
               <UniIcon>
                 <img src={Logo} style={{ width: '50px' }} alt="logo" />
               </UniIcon>
