@@ -23,7 +23,7 @@
     {
       "chainId": 534354,
       "address": "0x4f4eb5ac461c115191390d1760109f1ea185e609",
-      "name": "TSUNI2",
+      "name": "TSUNI",
       "symbol": "TSUNI2",
       "decimals": 18,
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/uni-v2.png"
