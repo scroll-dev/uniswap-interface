@@ -7,7 +7,7 @@ import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import { FortmaticConnector } from './Fortmatic'
 import { NetworkConnector } from './NetworkConnector'
 
-const NETWORK_URL = process.env.REACT_APP_NETWORK_URL
+const NETWORK_URL = 'https://mainnet.infura.io/v3/099fc58e0de9451d80b18d7c74caa7c1' // TODO: Refactor
 const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
 
