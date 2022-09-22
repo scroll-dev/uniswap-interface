@@ -5,7 +5,7 @@
   "timestamp": "2022-09-19T00:00:00.000Z",
   "tokens": [
     {
-      "chainId": 534354,
+      "chainId": 5343541,
       "address": "0x80732890c93c6D9c6C23E06F888eD0CB88A06018",
       "name": "TSUSDC",
       "symbol": "TSUSDC",
@@ -13,7 +13,7 @@
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/usd-coin.png"
     },
     {
-      "chainId": 534354,
+      "chainId": 5343541,
       "address": "0x05fDbDfaE180345C6Cff5316c286727CF1a43327",
       "name": "TSWETH",
       "symbol": "TSWETH",
@@ -21,7 +21,7 @@
       "logoURI": "https://staging-prealpha.scroll.io/swap/images/weth.png"
     },
     {
-      "chainId": 534354,
+      "chainId": 5343541,
       "address": "0x4f4eb5ac461c115191390d1760109f1ea185e609",
       "name": "TSUNI2",
       "symbol": "TSUNI2",
@@ -30,7 +30,7 @@
     }
   ],
   "version": {
-    "major": 2,
+    "major": 3,
     "minor": 0,
     "patch": 0
   }
