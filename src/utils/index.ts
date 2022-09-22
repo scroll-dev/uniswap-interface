@@ -23,10 +23,9 @@ export function isAddress(value: any): string | false {
 //   4: 'rinkeby.',
 //   5: 'goerli.',
 //   42: 'kovan.',
-//   534354: 'test.'
+//   5343541: 'test.' # SCROLL STAGING PREALPHA
 // }
 
-// TODO: Make dynamic and manage centrally
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
   const prefix = process.env.REACT_APP_EXTERNAL_EXPLORER_URI
 
