@@ -14515,9 +14515,9 @@ unique-slug@^2.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
-"uniswap-v2-sdk-scroll@https://github.com/scroll-tech/uniswap-v2-sdk-scroll.git#main":
+"uniswap-v2-sdk-scroll@https://github.com/scroll-tech/uniswap-v2-sdk-scroll.git#staging":
   version "3.10.4"
-  resolved "https://github.com/scroll-tech/uniswap-v2-sdk-scroll.git#afb3cb23ec2726b4f81a0fa8fd741a769df6476d"
+  resolved "https://github.com/scroll-tech/uniswap-v2-sdk-scroll.git#f633744d61e99fc1eac53c8dd4017d2aa4f1c8f0"
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
