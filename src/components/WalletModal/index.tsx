@@ -160,7 +160,7 @@ export default function WalletModal({
         decimals: 18
       },
       rpcUrls: [process.env.REACT_APP_EXTERNAL_RPC_URI_L2],
-      blockExplorerUrls: [process.env.REACT_APP_EXTERNAL_EXPLORER_URI]
+      blockExplorerUrls: [process.env.REACT_APP_EXTERNAL_EXPLORER_URI_L2]
     }
     ;(window?.ethereum as any).request({
       method: 'wallet_addEthereumChain',
