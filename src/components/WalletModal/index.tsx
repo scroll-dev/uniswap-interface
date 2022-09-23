@@ -159,7 +159,7 @@ export default function WalletModal({
         symbol: process.env.REACT_APP_ETH_SYMBOL,
         decimals: 18
       },
-      rpcUrls: [process.env.REACT_APP_EXTERNAL_RPC_URI],
+      rpcUrls: [process.env.REACT_APP_EXTERNAL_RPC_URI_L2],
       blockExplorerUrls: [process.env.REACT_APP_EXTERNAL_EXPLORER_URI]
     }
     ;(window?.ethereum as any).request({
