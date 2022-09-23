@@ -14517,7 +14517,7 @@ unique-slug@^2.0.0:
 
 "uniswap-v2-sdk-scroll@https://github.com/scroll-tech/uniswap-v2-sdk-scroll.git#main":
   version "3.10.4"
-  resolved "https://github.com/scroll-tech/uniswap-v2-sdk-scroll.git#afb3cb23ec2726b4f81a0fa8fd741a769df6476d"
+  resolved "https://github.com/scroll-tech/uniswap-v2-sdk-scroll.git#ab36c3d5bd38bba166a2fca9207fd663564651cf"
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
