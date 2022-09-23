@@ -27,7 +27,7 @@ export function isAddress(value: any): string | false {
 // }
 
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
-  const prefix = process.env.REACT_APP_EXTERNAL_EXPLORER_URI
+  const prefix = process.env.REACT_APP_EXTERNAL_EXPLORER_URI_L2
 
   switch (type) {
     case 'transaction': {
