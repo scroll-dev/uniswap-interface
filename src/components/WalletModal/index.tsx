@@ -148,7 +148,7 @@ export default function WalletModal({
 
   const switchToL2 = () => {
     const networkInfo = {
-      chainId: '0x' + parseInt(process.env.REACT_APP_CHAIN_ID as string).toString(16),
+      chainId: '0x' + parseInt(process.env.REACT_APP_CHAIN_ID_L2 as string).toString(16),
       chainName:
         'Scroll L2 Testnet' +
         (process.env.REACT_APP_SCROLL_ENVIRONMENT === 'MAIN'
