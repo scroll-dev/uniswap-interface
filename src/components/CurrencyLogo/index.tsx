@@ -7,8 +7,7 @@ import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 
-const getTokenLogoURL = (address: string) =>
-  `https://raw.githubusercontent.com/scroll-dev/uniswap-interface/main/public/images/${address}/logo.png`
+const getTokenLogoURL = (address: string) => `https://prealpha.scroll.io/swap/images/${address}/logo.png`
 
 const StyledEthereumLogo = styled.img<{ size: string }>`
   width: ${({ size }) => size};

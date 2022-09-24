@@ -1,7 +1,7 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
 import { darken, lighten } from 'polished'
-import React, { useMemo, useEffect } from 'react'
+import React, { useMemo, useEffect, useState } from 'react'
 import { Activity } from 'react-feather'
 import { useTranslation } from 'react-i18next'
 import styled, { css } from 'styled-components'
@@ -167,7 +167,7 @@ function Web3StatusInner() {
   const { account, connector, error } = useWeb3React()
 
   const { ENSName } = useENSName(account ?? undefined)
-
+  const [isConnected, setIsConnected] = useState(false)
   const allTransactions = useAllTransactions()
 
   const sortedRecentTransactions = useMemo(() => {
@@ -180,6 +180,15 @@ function Web3StatusInner() {
   const hasPendingTransactions = !!pending.length
   const hasSocks = useHasSocks()
   const toggleWalletModal = useWalletModalToggle()
+
+  useEffect(() => {
+    const checkIfConnected = () => {
+      ;(window.ethereum as any).request({ method: 'eth_requestAccounts' }).then(() => {
+        setIsConnected(true)
+      })
+    }
+    checkIfConnected()
+  }, [])
 
   useEffect(() => {
     if (account) {
@@ -203,11 +212,11 @@ function Web3StatusInner() {
         {!hasPendingTransactions && connector && <StatusIcon connector={connector} />}
       </Web3StatusConnected>
     )
-  } else if (error) {
+  } else if (error || isConnected) {
     return (
       <Web3StatusError onClick={toggleWalletModal}>
         <NetworkIcon />
-        <Text>{error instanceof UnsupportedChainIdError ? 'Wrong Network' : 'Error'}</Text>
+        <Text>{error instanceof UnsupportedChainIdError ? 'Wrong Network' : 'Wrong Network'}</Text>
       </Web3StatusError>
     )
   } else {
