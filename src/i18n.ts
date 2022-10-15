@@ -8,6 +8,7 @@ i18next
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    whitelist: ['en', 'de', 'es-AR', 'es-US', 'it-IT', 'iw', 'ro', 'ru', 'vi', 'zh', 'zh-CN', 'zh-TW'],
     backend: {
       loadPath: `./locales/{{lng}}.json`
     },
