@@ -3,7 +3,7 @@ import { ChainId, JSBI, Percent, Token, WETH } from 'uniswap-v2-sdk-scroll'
 
 import { injected } from '../connectors'
 
-export const ROUTER_ADDRESS = '0xEe0e03C1a621084cA3c542F36E4A5D0230304471'
+export const ROUTER_ADDRESS = '0x57b0c3F1a00d62d6873CD3fcE182783A3206ac61'
 
 // a list of tokens by      chain
 type ChainTokenList = {
