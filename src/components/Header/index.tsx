@@ -11,8 +11,6 @@ import { useETHBalances } from '../../state/wallet/hooks'
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
 
-import { CommonHeader } from 'scroll-common-header'
-
 import React from 'react'
 import { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
