@@ -126,7 +126,6 @@ export default function Header() {
 
   return (
     <div style={{ display: 'block', width: '100%' }}>
-      <CommonHeader activeTab="Swap" backgroundColor="#fff" type={'path'}></CommonHeader>
       <HeaderFrame>
         <RowBetween
           style={{ alignItems: 'flex-start', justifyContent: 'end', paddingTop: 0, marginTop: '40px' }}
